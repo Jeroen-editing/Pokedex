@@ -181,46 +181,46 @@ const viewPokemon = (response) => {
 
 const viewHabitat = (habitat) => {
     if (habitat == 'forest') {
-        hab_bg.style.background = "url(/habitats/forest3.jpg) no-repeat";
+        hab_bg.style.background = "url(./habitats/forest3.jpg) no-repeat";
         habitat_text.innerText = "forest";
         habitat_text.style.width = "70px";
     } else if (habitat == 'grassland') {
-        hab_bg.style.background = "url(/habitats/grassland2.jpg) no-repeat";
+        hab_bg.style.background = "url(./habitats/grassland2.jpg) no-repeat";
         habitat_text.innerText = "grassland";
         habitat_text.style.width = "70px";
     } else if (habitat == 'waters-edge') {
-        hab_bg.style.background = "url(/habitats/water-edge2.jpg) no-repeat";
+        hab_bg.style.background = "url(./habitats/water-edge2.jpg) no-repeat";
         habitat_text.innerText = "water's-edge";
         habitat_field.style.width = "170px";
         habitat_text.style.width = "100px";
     } else if (habitat == 'sea') {
-        hab_bg.style.background = "url(/habitats/sea2.jpg) no-repeat";
+        hab_bg.style.background = "url(./habitats/sea2.jpg) no-repeat";
         habitat_text.innerText = "sea";
         habitat_text.style.width = "70px";
     } else if (habitat == 'cave') {
-        hab_bg.style.background = "url(/habitats/cave2.jpg) no-repeat";
+        hab_bg.style.background = "url(./habitats/cave2.jpg) no-repeat";
         habitat_text.innerText = "cave";
         habitat_text.style.width = "70px";
     } else if (habitat == 'mountain') {
-        hab_bg.style.background = "url(/habitats/mountain2.jpg) no-repeat";
+        hab_bg.style.background = "url(./habitats/mountain2.jpg) no-repeat";
         habitat_text.innerText = "mountain";
         habitat_text.style.width = "70px";
     } else if (habitat == 'rough-terrain') {
-        hab_bg.style.background = "url(/habitats/desert2.jpg) no-repeat";
+        hab_bg.style.background = "url(./habitats/desert2.jpg) no-repeat";
         habitat_text.innerText = "rough-terrain";
         habitat_field.style.width = "170px";
         habitat_text.style.width = "100px";
     } else if (habitat == 'urban') {
-        hab_bg.style.background = "url(/habitats/urban2.jpg) no-repeat";
+        hab_bg.style.background = "url(./habitats/urban2.jpg) no-repeat";
         habitat_text.innerText = "urban";
         habitat_text.style.width = "70px";
     } else if (habitat === 'no') {
-        hab_bg.style.background = "url(/habitats/rare2.jpg) no-repeat";
+        hab_bg.style.background = "url(./habitats/rare2.jpg) no-repeat";
         habitat_text.innerText = "multiple";
         habitat_field.style.width = "170px";
         habitat_text.style.width = "100px";
     } else {
-        hab_bg.style.background = "url(/habitats/rare2.jpg) no-repeat";
+        hab_bg.style.background = "url(./habitats/rare2.jpg) no-repeat";
         habitat_text.innerText = "rare pokemon";
         habitat_field.style.width = "170px";
         habitat_text.style.width = "100px";
