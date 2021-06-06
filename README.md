@@ -1,5 +1,5 @@
 # Pokedex
-Ajax-pokedex
+#### Ajax-pokedex
 
 New (personal) version, based on a group-project.
 
