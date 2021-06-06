@@ -3,4 +3,4 @@
 
 New (personal) version, based on a group-project.
 
-### https://jeroen-editing.github.io/Pokedex/
+### https://jeroen-editing.github.io/Pokedex/index.html
