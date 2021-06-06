@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pokedex</title>
+    <link href="./css/stylesheet.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:700|Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Dosis:wght@200;300;400;500;600&family=Saira+Semi+Condensed:wght@200;300;400;500;600&family=Saira:wght@200;300;400;500;600&family=Teko:wght@300;400;500;600&display=swap" rel="stylesheet"> 
+</head>
+<body id="body">
+    <main class="pokedex"> 
+        <div class="container">     
+            <div class="screenBox">
+                <div class="screenBg">
+                    <div class="welcome welcomeVisible" id="welcomeScreen">
+                        <h3 class="welcomeText topWelcome">
+                            ... Pokédex activating ...
+                        </h3>
+                        <h3 class="welcomeText bottomWelcome">
+                            Enter your search when all circuits are operational.
+                        </h3>
+                    </div>
+                    <div class="screen screenHidden" id="mainScreen">
+                        <div class="buttonTop buttonHidden" id="newButton">
+                            <button class="newButton">
+                                <p>New<br>Search</p>
+                            </button>
+                        </div>
+                        <form class="searchForm formHidden" id="form">
+                            <input type="text" title="" placeholder="Enter Pokemon name ..." class="input" id="searchField">
+                        </form>
+                        <div class="habitatBg bgHidden" id="hab_bg">
+                            <div class="pokeBox">
+                                <div class="info infoHidden" id="info">
+                                    <div class="images">
+                                        <div class="pokeImg pokeImgHidden" id="front-sprite-back"></div>
+                                        <div class="pokeHabitat pokeImgHidden" id="front-sprite-front"></div>
+                                    </div>
+                                    <div class="output_nameId">
+                                        <p class="pokeName" id="poke-name"></p>
+                                        <p class="pokeId" id="poke-id"></p>
+                                    </div>
+                                </div>
+                                <div class="details detailsHidden" id="details">
+                                    <div class="outputField specifics">
+                                        <div class="output_types">
+                                            <p class="typesTitle">type:</p>
+                                            <p class="pokeType" id="poke-type-one"></p>
+                                            <p class="slash" id="typeSlash">-</p>
+                                            <p class="pokeType" id="poke-type-two"></p>
+                                        </div>
+                                        <div class="output_h_w">
+                                            <div class="output_h">
+                                                <p>height :</p>
+                                                <p class="h_and_w" id="height"></p>
+                                            </div>
+                                            <!--<p class="slash" id="typeSlash">|</p>-->
+                                            <div class="output_w">
+                                                <p>weight :</p>
+                                                <p class="h_and_w" id="weight"></p>
+                                            </div>
+                                        </div>
+                                        <div class="output_habitat">
+                                            <div class="habitat" id="habitatField">
+                                                <p>habitat :</p>
+                                                <p class="hab" id="habitat"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="outputField moves">
+                                        <div class="movesTop">
+                                            <h4 class="movesTitle">- moves -</h4>
+                                        </div>
+                                        <div class="movesBottom">
+                                            <div class="movesLeft">
+                                                <p class="outputMove" id="moveOne"></p>
+                                                <p class="outputMove" id="moveTwo"></p>
+                                            </div>
+                                            <div class="movesRight">
+                                                <p class="outputMove" id="moveThree"></p>
+                                                <p class="outputMove" id="moveFour"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="evolutions evolutionsHidden" id="evolutions">
+                                    <div class="outputField evos">
+                                        <div class="evosTitleBox">
+                                            <h4 class="evosTitle">- evolutions -</h4>
+                                        </div>
+                                        <div class="evosBox">
+                                            <div class="evo_One">
+                                                <div class="evoImg" id="evoImgOne">
+                                                    <!--
+                                                    <div class='replaceText textHidden' id="babyText">
+                                                        <p class="babyText">He's</p>
+                                                        <p class="babyText">the baby.</p>
+                                                    </div>
+                                                    -->
+                                                </div>
+                                                <div class="evoNameBox">
+                                                    <p class="evoName" id="evoNameOne"></p>
+                                                </div>
+                                                <div class="evoIdBox">
+                                                    <p class="evoId" id="evoIdOne"></p>
+                                                </div>
+                                            </div>
+                                            <div class="lineBetween"></div>
+                                            <div class="evo_Two">
+                                                <div class="evoImg" id="evoImgTwo">
+
+                                                </div>
+                                                <div class="evoNameBox">
+                                                    <p class="evoName" id="evoNameTwo"></p>
+                                                </div>
+                                                <div class="evoIdBox">
+                                                    <p class="evoId" id="evoIdTwo"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="buttonBottom buttonHidden" id="evoButton">
+                            <button class="evoButton">
+                                <p>Evolutions</p>
+                            </button>
+                        </div>
+                        <div class="buttonBottom buttonHidden" id="detailsButton">
+                            <button class="detailsButton">
+                                <p>Details</p>
+                            </button>
+                        </div>
+                        <div class="buttonBottom noEvosHidden" id="noButton">
+                            <button class="noEvos">
+                                <p>No<br>evolutions</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pageTitles" id="titleBox">
+                <div class="boyPichu">
+                    <img src="img/AshKetchum_small.png" alt="">
+                </div>
+                <div class="mainTitle">
+                    <h1>Pokédex</h1>
+                </div> 
+            </div>
+        </div>
+    </main>
+    <script src="app.js"></script>
+
+</body>
+</html>

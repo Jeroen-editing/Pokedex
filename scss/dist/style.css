@@ -1,0 +1,664 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: auto;
+  background: black;
+}
+
+.pokedex {
+  width: 1100px;
+  max-width: 1100px;
+  height: 700px;
+  margin: auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 1100px;
+  max-width: 1100px;
+  height: 700px;
+  background: url(../img/rainy_city.gif) no-repeat;
+  background-size: cover;
+  border: 2px solid #242424;
+}
+.container .screenBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 380px;
+  margin: 0 0;
+}
+.container .screenBox .screenBg {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 386px;
+  height: 640px;
+  margin: 30px 0;
+  background: url(../img/pokédexSmall.png) no-repeat;
+  background-size: cover;
+}
+.container .welcome {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 356px;
+  height: 640px;
+  margin: 0 auto;
+}
+.container .welcome .welcomeText {
+  width: 306px;
+  max-width: 386px;
+  margin: 0 0 12px 0;
+  padding: 0 50px;
+  color: #0f2350;
+  font-family: "Dosis";
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.container .welcome .topWelcome {
+  text-transform: uppercase;
+  font-weight: 500;
+  animation: fastFadeIn 4s forwards;
+}
+.container .welcome .bottomWelcome {
+  animation: slowFadeIn 6s forwards;
+}
+.container .screen {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  width: 356px;
+  height: 580px;
+  margin: 83px 0 0 5px;
+}
+.container .screen .buttonTop {
+  flex-direction: row;
+  justify-items: center;
+  width: 110px;
+  max-height: 50px;
+  margin: 9px auto 2px auto;
+}
+.container .screen .buttonTop .newButton {
+  width: 110px;
+  height: 47px;
+  border: 1px solid rgba(96, 115, 156, 0.2);
+  background: rgba(88, 126, 170, 0.6);
+  border-top-right-radius: 55px;
+  border-top-left-radius: 55px;
+}
+.container .screen .buttonTop .newButton p {
+  margin-top: 1px;
+  color: #2e5588;
+  color: white;
+  font-family: "Dosis";
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+.container .screen .buttonTop .newButton:hover {
+  background: rgba(29, 99, 46, 0.4);
+}
+.container .screen .buttonTop .newButton:hover p {
+  color: #2e5588;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+.container .screen .searchForm {
+  margin: 66px auto 0 auto;
+}
+.container .screen .searchForm .input {
+  width: 200px;
+  height: 26px;
+  margin: 0 auto;
+  padding: 0 10px 2px 10px;
+  color: #0f2350;
+  font-family: "Dosis";
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+  letter-spacing: 2px;
+  border: 1px solid rgba(96, 115, 156, 0.2);
+  border-top: none;
+  background: rgba(96, 115, 156, 0.04);
+  border-radius: 4px;
+  box-shadow: inset 0 -3px 2px 1px rgba(124, 144, 187, 0.08);
+}
+.container .screen .searchForm .input::placeholder {
+  color: rgba(15, 35, 80, 0.66);
+}
+.container .screen .habitatBg {
+  flex-direction: column;
+  min-width: 354px;
+  max-width: 354px;
+  min-height: 333px;
+  max-height: 333px;
+  margin: 0 auto;
+  padding: 14px 0 6px 0;
+}
+.container .screen .info,
+.container .screen .details,
+.container .screen .evolutions {
+  flex-direction: column;
+  justify-items: center;
+  width: 290px;
+  margin: -8px auto 0 auto;
+}
+.container .screen .info .outputField,
+.container .screen .details .outputField,
+.container .screen .evolutions .outputField {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 14px auto;
+  padding: 2px 10px 4px 10px;
+}
+.container .screen .info .outputField p,
+.container .screen .details .outputField p,
+.container .screen .evolutions .outputField p {
+  color: #0f2350;
+  font-family: "Dosis";
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.container .screen .info .pokeBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  min-width: 290px;
+  max-width: 290px;
+  margin: 0 auto;
+  background: rgba(58, 67, 85, 0.8);
+  border: 1px solid rgba(32, 45, 71, 0.6);
+  border-top: none;
+  border-top-right-radius: 14px;
+  border-top-left-radius: 14px;
+  box-shadow: 0 -4px 4px 1px rgba(96, 115, 156, 0.06);
+}
+.container .screen .info .pokeBox .pokeImg,
+.container .screen .info .pokeBox .pokeHabitat {
+  min-width: 110px;
+  min-height: 110px;
+  margin: 0 12px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+}
+.container .screen .info .output_nameId {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-width: 280px;
+  max-width: 280px;
+  padding: 0 0;
+  background: rgba(58, 67, 85, 0.8);
+  border: 1px solid rgba(32, 45, 71, 0.6);
+  border-top: none;
+  border-bottom-right-radius: 14px;
+  border-bottom-left-radius: 14px;
+  box-shadow: 0 4px 4px 1px rgba(96, 115, 156, 0.06);
+}
+.container .screen .info .output_nameId .pokeName,
+.container .screen .info .output_nameId .pokeId {
+  color: white;
+  font-family: "Saira Semi Condensed";
+  padding: 0 12px;
+  font-size: 18px;
+  font-weight: 600;
+  text-shadow: 0 0 2px black;
+}
+.container .screen .info .output_nameId .pokeName {
+  text-transform: capitalize;
+}
+.container .screen .details {
+  min-height: 184px;
+  max-height: 184px;
+  padding: 3px 8px;
+  background: rgba(58, 67, 85, 0.8);
+  border: 1px solid rgba(32, 45, 71, 0.6);
+  border-radius: 14px;
+  box-shadow: 0 4px 4px 1px rgba(96, 115, 156, 0.06);
+}
+.container .screen .details .outputField {
+  padding: 2px 12px;
+  margin: 2px auto 3px auto;
+  background: rgba(177, 182, 192, 0.4);
+  border: 1px solid rgba(32, 45, 71, 0.4);
+  border-top: none;
+  border-radius: 6px;
+  box-shadow: 0 2px 2px 1px rgba(96, 115, 156, 0.06);
+}
+.container .screen .details .output_types {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  min-width: 160px;
+  background: rgba(177, 182, 192, 0.4);
+  border: 1px solid rgba(32, 45, 71, 0.4);
+  border-top: none;
+  border-radius: 6px;
+  box-shadow: 0 4px 4px 1px rgba(96, 115, 156, 0.06);
+}
+.container .screen .details .output_types .typesTitle {
+  padding-top: 2px;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+}
+.container .screen .details .output_types .pokeType {
+  width: 80px;
+  color: #0f2350;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+}
+.container .screen .details .output_types .slash {
+  font-size: 18px;
+  font-weight: 700;
+}
+.container .screen .details .output_h_w,
+.container .screen .details .output_habitat {
+  flex-direction: row;
+  justify-content: space-around;
+  width: 280px;
+  padding: 0 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+.container .screen .details .output_h_w .output_h,
+.container .screen .details .output_h_w .output_w,
+.container .screen .details .output_h_w .habitat,
+.container .screen .details .output_habitat .output_h,
+.container .screen .details .output_habitat .output_w,
+.container .screen .details .output_habitat .habitat {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100px;
+  padding: 2px 14px 4px 14px;
+  background: rgba(177, 182, 192, 0.4);
+  border: 1px solid rgba(32, 45, 71, 0.4);
+  border-top: none;
+  border-radius: 6px;
+  box-shadow: 0 2px 2px 1px rgba(96, 115, 156, 0.06);
+}
+.container .screen .details .output_h_w .slash,
+.container .screen .details .output_habitat .slash {
+  width: 60px;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+.container .screen .details .output_h_w p,
+.container .screen .details .output_habitat p {
+  width: 50px;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left;
+}
+.container .screen .details .output_h_w .h_and_w,
+.container .screen .details .output_h_w .hab,
+.container .screen .details .output_habitat .h_and_w,
+.container .screen .details .output_habitat .hab {
+  width: 30px;
+  color: #0f2350;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: right;
+}
+.container .screen .details .output_h_w .habitat,
+.container .screen .details .output_habitat .habitat {
+  width: 140px;
+}
+.container .screen .details .output_h_w .habitat p,
+.container .screen .details .output_habitat .habitat p {
+  width: 70px;
+}
+.container .screen .details .moves {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 280px;
+  padding: 2px 0;
+  background: rgba(177, 182, 192, 0.4);
+  border: 1px solid rgba(32, 45, 71, 0.4);
+  border-top: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 2px 1px rgba(96, 115, 156, 0.06);
+}
+.container .screen .details .moves .movesTop,
+.container .screen .details .moves .movesBottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  min-width: 270px;
+}
+.container .screen .details .moves .movesTop {
+  margin: 0 0 1px 0;
+  padding: 0 0;
+}
+.container .screen .details .moves .movesTop .movesTitle {
+  padding: 0 12px;
+  color: white;
+  font-family: "Saira Semi Condensed";
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.container .screen .details .moves .movesBottom {
+  padding: 4px 0 0 0;
+  border-top: 1px solid rgba(32, 45, 71, 0.4);
+  border-radius: 10px;
+  box-shadow: inset 0 2px 2px 1px rgba(96, 115, 156, 0.06);
+}
+.container .screen .details .moves .movesLeft,
+.container .screen .details .moves .movesRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 135px;
+}
+.container .screen .details .moves .movesLeft .outputMove,
+.container .screen .details .moves .movesRight .outputMove {
+  width: 110px;
+  height: 22px;
+  color: #0f2350;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.container .screen .evolutions {
+  min-height: 184px;
+  max-height: 184px;
+  margin: 0 auto 2px auto;
+  padding: 0 8px;
+  background: rgba(58, 67, 85, 0.8);
+  border: 1px solid rgba(32, 45, 71, 0.6);
+  border-top: none;
+  border-radius: 14px;
+  box-shadow: 0 2px 2px 1px rgba(96, 115, 156, 0.06);
+}
+.container .screen .evolutions .evos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 290px;
+  margin: 0 auto;
+  padding: 0 0;
+}
+.container .screen .evolutions .evos .evosTitleBox {
+  min-width: 270px;
+  margin: 0 auto;
+  padding: 4px 12px;
+}
+.container .screen .evolutions .evos .evosTitleBox .evosTitle {
+  max-height: 80px;
+  padding: 0 4px 0 6px;
+  color: #e4e4e4;
+  font-family: "Saira Semi Condensed";
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+  text-shadow: 0 0 2px black;
+}
+.container .screen .evolutions .evos .evosBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 140px;
+  min-width: 264px;
+  margin: 0 auto;
+  padding: 4px 12px 0 12px;
+  border-top: 1px solid rgba(161, 164, 170, 0.6);
+  border-radius: 10px;
+  box-shadow: inset 0 2px 2px 1px rgba(96, 115, 156, 0.06);
+}
+.container .screen .evolutions .evos .evosBox .evo_One,
+.container .screen .evolutions .evos .evosBox .evo_Two {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+  height: 130px;
+}
+.container .screen .evolutions .evos .evosBox .evo_One .evoImg,
+.container .screen .evolutions .evos .evosBox .evo_Two .evoImg {
+  width: 100px;
+  min-height: 100px;
+  margin: -6px 0 0 0;
+}
+.container .screen .evolutions .evos .evosBox .evo_One .evoNameBox,
+.container .screen .evolutions .evos .evosBox .evo_One .evoIdBox,
+.container .screen .evolutions .evos .evosBox .evo_Two .evoNameBox,
+.container .screen .evolutions .evos .evosBox .evo_Two .evoIdBox {
+  max-height: 40px;
+}
+.container .screen .evolutions .evos .evosBox .evo_One .evoNameBox .evoName,
+.container .screen .evolutions .evos .evosBox .evo_One .evoNameBox .evoId,
+.container .screen .evolutions .evos .evosBox .evo_One .evoIdBox .evoName,
+.container .screen .evolutions .evos .evosBox .evo_One .evoIdBox .evoId,
+.container .screen .evolutions .evos .evosBox .evo_Two .evoNameBox .evoName,
+.container .screen .evolutions .evos .evosBox .evo_Two .evoNameBox .evoId,
+.container .screen .evolutions .evos .evosBox .evo_Two .evoIdBox .evoName,
+.container .screen .evolutions .evos .evosBox .evo_Two .evoIdBox .evoId {
+  color: white;
+  font-family: "Saira Semi Condensed";
+  padding: 0 12px;
+  font-size: 16px;
+  font-weight: 600;
+  text-shadow: 0 0 2px black;
+}
+.container .screen .evolutions .evos .evosBox .evo_One .evoNameBox,
+.container .screen .evolutions .evos .evosBox .evo_Two .evoNameBox {
+  margin-top: -8px;
+}
+.container .screen .evolutions .evos .evosBox .lineBetween {
+  min-width: 1px;
+  max-width: 1px;
+  height: 128px;
+  margin-top: 8px;
+  background: rgba(133, 143, 165, 0.4);
+}
+.container .screen .buttonBottom {
+  flex-direction: row;
+  justify-items: center;
+  width: 110px;
+  height: 60px;
+  margin: 4px auto;
+}
+.container .screen .buttonBottom .evoButton,
+.container .screen .buttonBottom .detailsButton,
+.container .screen .buttonBottom .noEvos {
+  width: 110px;
+  height: 47px;
+  margin-top: -1px;
+  border: 1px solid rgba(96, 115, 156, 0.2);
+  background: rgba(96, 115, 156, 0.5);
+  border-bottom-right-radius: 55px;
+  border-bottom-left-radius: 55px;
+}
+.container .screen .buttonBottom .evoButton p,
+.container .screen .buttonBottom .detailsButton p,
+.container .screen .buttonBottom .noEvos p {
+  margin-top: -18px;
+  color: white;
+  font-family: "Dosis";
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+.container .screen .buttonBottom .evoButton:hover,
+.container .screen .buttonBottom .detailsButton:hover,
+.container .screen .buttonBottom .noEvos:hover {
+  background: rgba(29, 99, 46, 0.4);
+}
+.container .screen .buttonBottom .evoButton:hover p,
+.container .screen .buttonBottom .detailsButton:hover p,
+.container .screen .buttonBottom .noEvos:hover p {
+  color: #23426b;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+.container .screen .buttonBottom .noEvos p {
+  margin-top: -8px;
+  text-transform: capitalize;
+  line-height: 14px;
+}
+.container .screen .buttonBottom .noEvos:hover {
+  background: rgba(96, 115, 156, 0.5);
+}
+.container .screen .buttonBottom .noEvos:hover p {
+  color: white;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+.container .welcomeVisible {
+  display: flex;
+  animation: slowFadeOut 7s forwards;
+}
+.container .welcomeHidden,
+.container .screenHidden,
+.container .formHidden,
+.container .bgHidden,
+.container .infoHidden,
+.container .pokeImgHidden,
+.container .habitatHidden,
+.container .detailsHidden,
+.container .evolutionsHidden,
+.container .textHidden,
+.container .buttonHidden,
+.container .noEvosHidden {
+  display: none;
+}
+.container .screenVisible,
+.container .formVisible,
+.container .bgVisible,
+.container .infoVisible,
+.container .pokeImgVisible,
+.container .habitatVisible,
+.container .detailsVisible,
+.container .evolutionsVisible,
+.container .textVisible,
+.container .buttonVisible {
+  display: flex;
+  animation: fastFadeIn 2s forwards;
+}
+.container .noEvosVisible {
+  display: flex;
+  animation: slowFadeOut 5s forwards;
+}
+.container .titleBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: 600px;
+  height: 500px;
+  margin: 0 0;
+}
+.container .boyPichu,
+.container .mainTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: flex-end;
+  width: 500px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid #b50419;
+}
+.container .boyPichu {
+  height: 300px;
+  margin: 224px 0 0 0;
+  padding: 10px 20px 0 20px;
+  background: url(../img/backgroundDark.jpg) no-repeat;
+  background-size: cover;
+  border-bottom: none;
+  border-top-right-radius: 16px;
+  border-top-left-radius: 16px;
+  overflow: hidden;
+}
+.container .boyPichu img {
+  width: 360px;
+  height: 530px;
+  margin: 0 20px 0 260px;
+}
+.container .mainTitle {
+  height: 80px;
+  margin: 0 0 60px 0;
+  padding: 20px 20px;
+  background-color: #b50419;
+  border-top: none;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.container .mainTitle h1 {
+  width: 100%;
+  height: 80px;
+  margin: 0 auto;
+  padding-left: 20px;
+  color: white;
+  font-family: "Dosis";
+  font-size: 66px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 26px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.4), 0 0 6px rgba(0, 0, 0, 0.6), 0 0 4px rgba(0, 0, 0, 0.8);
+}
+
+@keyframes fastFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slowFadeIn {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slowFadeOut {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
