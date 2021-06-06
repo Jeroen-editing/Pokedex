@@ -135,10 +135,10 @@ body {
     .topWelcome {
         text-transform: uppercase;
         font-weight: 500;
-        animation: fastFadeIn 4s forwards;
+        animation: fastFadeIn 3s forwards;
     }
     .bottomWelcome {
-        animation: slowFadeIn 6s forwards;
+        animation: slowFadeIn 5s forwards;
     }
 }
 .screen {
@@ -269,6 +269,7 @@ body {
 
         &::placeholder {
             color: rgba(15, 35, 80, 0.66);
+            letter-spacing: 1px;
         }
     }
 }

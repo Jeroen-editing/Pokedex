@@ -68,7 +68,7 @@ const activateScreen = () => {
 
         pokedexActive();
     }
-    setTimeout(showInput, 100);
+    setTimeout(showInput, 6000);
 }
 
 const pokedexActive = () => {
